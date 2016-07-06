@@ -1,0 +1,37 @@
+<script>
+var user = prompt("You are walking through the forest, when suddenly a troll jumps out of the bushes and ambushes you. What do you do? FIGHT, RUN or HIDE?").toUpperCase();
+switch(user){
+    case "FIGHT":
+        var userIn1 = prompt("Are you strong?").toUpperCase();
+        var userIn2 = prompt("Are you smart?").toUpperCase();
+        if(userIn1==="YES"||userIn2==="YES"){
+            console.log("You survive the troll encounter!");
+        }
+        else{
+            console.log("You get whacked by the troll");
+        }
+    break;
+    case "RUN":
+        var userIn = prompt("Are you a fast and enduring runner?").toUpperCase();
+        if(userIn==="YES"){
+            console.log("You get away from the troll!");
+        }
+        else{
+            console.log("But the troll is. He catches you, cooks you and eats you.");
+        }
+    break;
+    case "HIDE":
+        var userIn1 = prompt("Is there lush vegetation around your hiding place?").toUpperCase();
+        var userIn2 = prompt("Are you breathing heavily?").toUpperCase();
+        if(userIn1==="YES"&&userIn2==="YES"){
+            console.log("The troll could not find you and collapses from Hunger.");
+        }
+        else{
+            console.log("The troll found you and ripped your limbs off before eating you.");
+        }
+    break;
+    default:
+        console.log("I did not understand that command. Please refresh your browser.");
+        
+} 
+</script>

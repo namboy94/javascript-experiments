@@ -1,0 +1,27 @@
+<script>
+confirm("Are you ready to play?");
+var age = 0;
+age = prompt("What's your age?");
+if(age<16){
+    confirm("You are to young to play this game, I am not taking any responsibility for any potential emotional problems you may or may not develop due to playing this awesomely creative javascript game. That is all");
+}
+else{
+    confirm("You're old enough to play this game, congratulations! Have fun with this amazingly creative javascript game. That is all.");
+}
+confirm("Once upon a time, in a Land far far away, there was a grand city, which was bustling with life. The markets offered every produce available, the smiths forged the finest weapons and armour, and the king reigned from within his marvelous castle on top of a hill.");
+confirm("It was a peaceful city, a place for anyone to be, but this was about to change...");
+var userAnswer = prompt("You are a grand adventurer that happens to come along this marvelous city. In hopes of some relaxation, you visit the local pub. You sit down and have some mead. The bartender engages you in mindless conversation. When he asks you to pay, you realize that you might have to give a tip. You only have 12 doublones and the mead costs 11 doublones. How many doublones do you tip?");
+if(userAnswer>1){
+    confirm("You can't tip that much!");
+}
+if(userAnswer<0){
+    confirm("You can't give a negative tip!");
+}
+if (userAnswer>0){
+    confirm("You pay the bartender"+" " +userAnswer+" "+ "doublones. He is very happy about your tipp and offers you a friendly parting handshake.");
+}
+else{
+    confirm("You have offended the bartender. He spits you in the face and throws you out on the street");
+}
+
+</script>

@@ -1,0 +1,343 @@
+<script>
+var genderSet = prompt("Welcome to the world of Pokemon! I am Dexter, an autonomous Pokemon encyclopedia. We live in a world filled with wonderous creatures, called Pokemon. You are an aspiring young trainer. Let me ask you something: Are you a boy or a girl?");
+var gender = 1;
+while(gender===1){
+	if(genderSet === "boy"){
+		gender = "male";
+		}
+	else{if(genderSet === "girl"){
+			gender = "female";
+			}
+		else{
+			var genderSet = prompt("I am so very sorry, but I did not quite get that. Could you repeat your answer? Are you a boy or a girl?");
+			}
+		}
+	}		
+var userName = prompt("Now I would also like to know your name.");
+var userNameConfirm = prompt("Is"+" "+userName+" "+"really your name?");
+var userNameConfirm2 = 1;
+while(userNameConfirm2===1){
+	if(userNameConfirm === "yes"){
+		userNameConfirm2 = 0;
+		}
+	else{
+		var userName = prompt("Now I would also like to know your name.");
+		var userNameConfirm = prompt("Is"+" "+userName+" "+"really your name?");
+		}
+	}
+
+confirm("Your very own Pokemon adventure is about to unfold! Be brave and overcome all hardships that come your way. I will now shrink you into a pixelman!");
+var sleepCheck2 = 1;
+var sleepCheck = 1;
+while(sleepCheck2===1){
+while(sleepCheck===1){
+var pcYesNo = prompt("You awaken in your very own room. You see a chair, a desk and a PC. It is a magical PC, which can digitize items and store them as data. Do you want to turn the PC on?");
+if(pcYesNo === "yes"){
+		var potion = prompt("You boot up the PC. A potion is stored on it. Do you want to withdraw said potion?");
+		if(potion==="yes"){
+			var itemsPotion = 1;
+			confirm("You withdrew one potion. You turn off the PC.");
+			}
+		else{
+			var itemsPotion = 0;
+			confirm("You switch the PC back off without withdrawing anything");
+			}
+	}
+else{
+	confirm("You leave the PC in peace");
+	var itemsPotion = 0;
+	}
+var downstairs = prompt("You hear footsteps downstairs. Do you want to go down and check who's there?");
+if(downstairs === "yes"){
+	confirm("You went downstairs. There you meet your mom, who was busy cooking your favourite dinner. She said:"+" "+userName+"! The world-famous Pokemon Professor, Professor Oak, who incidentaly lives in the only other house in this town asked to see you! You should pay him a visit!");
+	sleepCheck = 0;
+	}
+else{
+	confirm("You go back to bed and sleep");
+	}
+}
+confirm("And so you did. You walked out of your home and out into the vast city that is Pallet town. On your way to the Pokemon Professor's lab, you get lost and wind up in a patch of tall grass. This is a bad situation for a young and aspiring Pokemon Trainer without any Pokemon, as wild Pokemon hide in the grass to attack their pray, in this case young, inexperienced trainers.");
+confirm("But alas, Professor Oak could get you to safety in time, before you became rat- and pidgeon food. After telling you of the dangers of the wild, he escorts you to his laboratory, as you can clearly not navigate correctly.");
+confirm("In his lab, you longtime rival stands with a smirk in his face, knowing full well that you did not even find the largest building in pallet town on your own. Professor Oak then proceeds to tell both of you about his invention, the Pokedex. It is a high-tech Pokemon encyclopedia without any entries on any Pokemon programmed into it. In essence, it is an e-reader with a cool skin.");
+var pokedexAccept = prompt("Because of this, the Professor asked that you and your rival would enter the data for him, as he is supposedly too old for this shit. In return, you may choose one of his prized starter Pokemon. Will you help Professor Oak out?");
+if(pokedexAccept === "yes"){
+	confirm("You accept the professor's offer. He gives you the Pokedex and offers you the choice of picking your Pokemon first, even before his grandson, your rival.");
+	sleepCheck2 = 0;
+	}
+else{
+	confirm("You decline his offer, go back home, into your room and back to sleep.");
+	}
+}
+var check2 = 1;
+while(check2===1){
+var starterChoice = prompt("There are three different Starter Pokemon to choose from. There is Bulbasaur, a Grass Type Pokemon. There is also Charmander, a Fire Type Pokemon. Finally there is Squirtle, a Water Type Pokemon. Which one do you pick?");
+if(starterChoice === "Bulbasaur"){
+	var starterConfirm = prompt("Are you sure you want Bulbasaur?");
+	if (starterConfirm ==="yes"){
+		var nickNameStarter = prompt("Do you want to give Bulbasaur a Nickname?");
+		check2 = 0;
+		if (nickNameStarter === "yes"){
+			var check1 = 1;
+			while(check1===1){
+			var nickNameStarterInput = prompt("What should Bulbasaur's nickname be?");
+			var nickNameStarterInputConfirm = prompt("Are you sure Bulbasaur's Nickname should be"+" "+nickNameStarterInput+"?");
+			if(nickNameStarterInputConfirm==="yes"){
+				var starterNick = nickNameStarterInput;
+				var starterSpecies = "Bulbasaur";
+				var rivalStarter = "Charmander";
+				check1 = 0;
+				}
+			else{
+				confirm("Please re-enter Bulbasaur's nickname");
+				}}}
+		else{
+			var starterNick = "Bulbasaur";
+			var starterSpecies = "Bulbasaur";
+			var rivalStarter = "Charmander";
+			}}
+	else{
+		confirm("Please re-chose your starter.");
+		}}
+else {if(starterChoice === "Charmander"){
+		var starterConfirm = prompt("Are you sure you want Charmander?");
+		if (starterConfirm ==="yes"){
+			var nickNameStarter = prompt("Do you want to give Charmander a Nickname?");
+			check2 = 0;
+			if (nickNameStarter === "yes"){
+				var check1 = 1;
+				while(check1===1){
+				var nickNameStarterInput = prompt("What should Charmander's nickname be?");
+				var nickNameStarterInputConfirm = prompt("Are you sure Charmander's Nickname should be"+" "+nickNameStarterInput+"?");
+				if(nickNameStarterInputConfirm==="yes"){
+					var starterNick = nickNameStarterInput;
+					var starterSpecies = "Charmander";
+					var rivalStarter = "Squirtle";
+					check1 = 0;
+					}
+				else{
+					confirm("Please re-enter Charmander's nickname");
+					}}}
+			else{
+				var starterNick = "Charmander";
+				var starterSpecies = "Charmander";
+				var rivalStarter = "Squirtle";
+				}}
+		else{
+			confirm("Please re-chose your starter.");
+			}}
+	else{if(starterChoice === "Squirtle"){
+			var starterConfirm = prompt("Are you sure you want Squirtle?");
+			if (starterConfirm ==="yes"){
+				var nickNameStarter = prompt("Do you want to give Squirtle a Nickname?");
+				check2 = 0;
+				if (nickNameStarter === "yes"){
+					var check1 = 1;
+					while(check1===1){
+					var nickNameStarterInput = prompt("What should Squirtle's nickname be?");
+					var nickNameStarterInputConfirm = prompt("Are you sure Squirtle's Nickname should be"+" "+nickNameStarterInput+"?");
+					if(nickNameStarterInputConfirm==="yes"){
+						var starterNick = nickNameStarterInput;
+						var starterSpecies = "Squirtle";
+						var rivalStarter = "Bulbasaur";
+						check1 = 0;
+						}
+					else{
+						confirm("Please re-enter Squirtle's nickname");
+						}}}
+				else{
+					var starterNick = "Squirtle";
+					var starterSpecies = "Squirtle";
+					var rivalStarter = "Bulbasaur";
+					}}
+			else{
+				confirm("Please re-chose your starter.");
+				}}
+		else{
+			confirm(starterChoice+" "+"is not available. Pleas re-pick from the three available Pokemon");
+}}}}
+confirm("You pick"+" "+starterSpecies+", whose nickname is"+" "+starterNick);
+var challenge = prompt("Your rival, being the smartass that he is, picks"+" "+rivalStarter+". That pokemon has a type advantage over yours. Not that it matter anyways, because these low level starters don't have any element-specific moves. Right after picking his starter, your rival boasts about his superior knowledge and challenges you to a battle. Do you accept?");
+if(challenge==="yes"){
+	var battle = true;
+	var money = 3000;
+	confirm("You accept his challenge. Get ready to fight!");
+	}
+else{
+	var battle = false;
+	var money = 0;
+	confirm("He hits you in the face for being a coward and takes your wallet, which had 3000$ in it.");
+	}
+var powerCharmander = 5;
+var powerSquirtle = 4;
+var powerBulbasaur = 3;
+var hpCharmander = 15;
+var hpSquirtle = 20;
+var hpBulbasaur = 25;
+var defCharmander = 4;
+var defSquirtle = 5;
+var defBulbasaur = 3;
+if(starterSpecies==="Bulbasaur"){
+	var userPower = powerBulbasaur;
+	var userHp = hpBulbasaur;
+	var userDef = defBulbasaur;
+	}
+else{if(starterSpecies==="Charmander"){
+		var userPower = powerCharmander;
+		var userHp = hpCharmander;
+		var userDef = defCharmander;
+		}
+	else{
+		var userPower = powerSquirtle;
+		var userHp = hpSquirtle;
+		var userDef = defSquirtle;
+		}}
+if(rivalStarter==="Bulbasaur"){
+	var rivalPower = powerBulbasaur;
+	var rivalHp = hpBulbasaur;
+	var rivalDef = defBulbasaur;
+	}
+else{if(rivalStarter==="Charmander"){
+		var rivalPower = powerCharmander;
+		var rivalHp = hpCharmander;
+		var rivalDef = defCharmander;
+		}
+	else{
+		var rivalPower = powerSquirtle;
+		var rivalHp = hpSquirtle;
+		var rivalDef = defSquirtle;
+		}}
+var totalDamageUser = 0;
+var totalDamageOpponent = 0;
+while(battle){
+confirm("Epic battle music starts");
+confirm("You are now battling your rival. Your Pokemon only has one move: Normal. You can also use a Potion, if you have one. To attack, type Normal. To use a potion, type use potion");
+battle = false;
+var battle2 = true;
+}
+while(battle2){
+var damageNormalUser = Math.floor(Math.random()*(userPower-(rivalDef/3)) + 1);
+var damageNormalRival = Math.floor(Math.random()*(rivalPower-(userDef/3))+ 1);
+var hitVariable = Math.random();
+if(hitVariable>0.2){
+	var hit = 1;
+	}
+else{
+	var hit = 0;
+	}
+var option = prompt("What do you want to do?");
+if(option==="Normal"){
+	confirm(starterNick+" "+"used a Normal attack!");
+	if(hit===1){
+		hitVariable = Math.random();
+		if(hitVariable>0.2){
+			hit = 1;
+			}
+		else{
+			hit = 0;
+			}
+		totalDamageOpponent += damageNormalUser;
+		confirm("It hit and did"+" "+damageNormalUser+" "+"damage. Your opponent now has"+" "+(rivalHp-totalDamageOpponent)+" "+"HP left.");
+		if(totalDamageOpponent>=rivalHp){
+			confirm("Your opponent fainted! You win 1500$!"+" "+starterNick+" "+"reached level 6!");
+			battle2 = false;
+			money =+ 1500;
+			starterLevel = 6;
+			}
+		else{if(hit===1){
+				totalDamageUser += damageNormalRival;
+				confirm("Your opponent used a Normal attack! It did"+ " "+ damageNormalRival+ " "+ "damage."+ " "+starterNick+ " "+ "now has"+ " "+(userHp-totalDamageUser)+" "+ "HP left.");
+				if(totalDamageUser>=userHp){
+					confirm("Your Pokemon fainted! You lose 1500$.");
+					battle2 = false;
+					money =- 1500;
+					}
+				}
+			
+			else{	
+				confirm("Your opponent attacked, but he missed...");
+				}}
+			}
+	else{
+		confirm("You missed the target!");
+		hitVariable = Math.random();
+		if(hitVariable>0.2){
+			hit = 1;
+			}
+		else{
+			hit = 0;
+			}
+		if(hit===1){
+				totalDamageUser += damageNormalRival;
+				confirm("Your opponent used a Normal attack! It did"+ " "+ damageNormalRival+ " "+ "damage."+ " "+starterNick+ " "+ "now has"+ " "+(userHp-totalDamageUser)+" "+ "HP left.");
+				if(totalDamageUser>=userHp){
+					confirm("Your Pokemon fainted! You lose 1500$.");
+					battle2 = false;
+					money =- 1500;
+					}
+				}
+		else{	
+		confirm("Your opponent attacked, but he missed...");
+			}
+			}}	
+else{if(option==="use potion"){
+		if(itemsPotion>0){
+			totalDamageUser = 0;
+			confirm(starterNick+" "+"was fully healed! It now has"+" "+userHp+" "+"HP");
+			itemsPotion -= 1;
+			}
+		else{
+			confirm("You have no potions left!");
+			}
+		if(hit===1){
+			totalDamageUser += damageNormalRival;
+			confirm("Your opponent used a Normal attack! It did"+ " "+ damageNormalRival+ " "+ "damage."+ " "+starterNick+ " "+ "now has"+ " "+(userHp-totalDamageUser)+" "+ "HP left.");
+			if(totalDamageUser>=userHp){
+				confirm("Your Pokemon fainted! You lose 1500$.");
+				battle2 = false;
+					money =- 1500;
+				}
+			}
+		else{	
+		confirm("Your opponent attacked, but he missed...");
+			}
+		}
+	else{
+		confirm("You did not enter a valid option. Please re-enter your choice.(Either Normal or use potion)");
+		}
+	}
+}
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

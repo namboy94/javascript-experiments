@@ -1,0 +1,77 @@
+<script>
+var cont = true;
+while(cont){
+var check = true;
+while(check){
+var userChoice = prompt("Do you choose ROCK, PAPER or SCISSORS?").toUpperCase();
+if(userChoice==="ROCK"||userChoice==="PAPER"||userChoice==="SCISSORS"){
+	check = false;
+	}
+else{
+	confirm("There was an error in your input. Please enter ROCK, PAPER or SCISSORS.");
+	}
+}
+var computerChoice = Math.random();
+if (computerChoice < 0.34) {
+	computerChoice = "ROCK";
+} 
+else if(computerChoice <= 0.67) {
+	computerChoice = "PAPER";
+} 
+    else {
+	computerChoice = "SCISSORS";
+} 
+
+console.log("Computer: " + computerChoice);
+
+var calc = function (choice1,choice2){
+    if(choice1===choice2){
+        return "tie";}
+    else{if(choice1==="ROCK"){
+            if(choice2==="SCISSORS"){
+                return "win";
+            }
+            else{
+                return "LOSE";
+            }}
+        else{if(choice1==="PAPER"){
+                if(choice2==="ROCK"){
+                    return "win";
+                }
+                else{
+                    return "lose";
+                }}
+            else{if(choice1==="SCISSORS"){
+                    if(choice2==="ROCK"){
+                        return"lose";
+                    }
+                    else{
+                        return"win";
+                    }}
+            }}}};		
+if(calc(userChoice,computerChoice)==="win"){
+	confirm("You picked"+" "+userChoice+".The computer chose"+" "+computerChoice+". You won!");
+}
+else{if(calc(userChoice,computerChoice)==="lose"){
+		confirm("You picked"+" "+userChoice+".The computer chose"+" "+computerChoice+". You lost...");
+	}
+	else{
+		confirm("You picked"+" "+userChoice+".The computer chose"+" "+computerChoice+". It's a draw!");
+	}}
+var check2 = true;
+while(check2){
+var contq = prompt("Do you want to play again?").toUpperCase();
+if (contq==="YES"){
+	cont = true;
+	check2 = false;
+	}
+else if(contq==="NO"){
+	cont = false;
+	check2 = false;
+	confirm("Thank you for playing!");
+	}
+	else{
+	confirm("I did not understand this. Could you please repeat if you want to continue playing?");
+	}
+}}
+</script>
